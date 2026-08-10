@@ -3,8 +3,8 @@
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
-#include <behaviors.dtsi>
 #include <behaviors/runtime-sensor-rotate.dtsi>
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
@@ -67,7 +67,7 @@
         tap-ms = <100>;
     };
 
-  combos {
+    combos {
         compatible = "zmk,combos";
 
         softoff {
@@ -125,6 +125,33 @@
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
+        };
+
+        MO4 {
+            bindings = <
+&kp TAB    &kp D  &lt 6 LC(T)      &kp V        &kp G         &mt LCTRL LC(Q)                        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp K  &kp Z            &kp E        &kp P         &kp B                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp X  &mt LC(LSHFT) C  &mt LC(H) H  &kp LEFT_ALT  &mt LEFT_SHIFT ENTER  &to 0            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                   &kp SPACE    &lt 6 LC(Z)   &mo 5                                                  &trans  &trans  &trans
+            >;
+        };
+
+        MO5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
+            >;
+        };
+
+        MO6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
+            >;
         };
     };
 };
