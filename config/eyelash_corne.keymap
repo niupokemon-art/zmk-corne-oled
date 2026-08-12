@@ -88,13 +88,40 @@
     keymap {
         compatible = "zmk,keymap";
 
+        MO4 {
+            bindings = <
+&kp TAB    &kp D  &lt 2 LC(T)      &kp V        &kp G         &mt LCTRL LC(Q)                        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp K  &kp Z            &kp E        &kp P         &kp B                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp X  &mt LC(LSHFT) C  &mt LC(H) H  &kp LEFT_ALT  &mt LEFT_SHIFT ENTER  &to 3            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                   &kp SPACE    &lt 2 LC(Z)   &mo 1                                                  &trans  &trans  &trans
+            >;
+        };
+
+        MO5 {
+            bindings = <
+&trans     &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kt LG(S)  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans  &trans  &trans                                    &trans  &trans  &trans
+            >;
+        };
+
+        MO6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
+            >;
+        };
+
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T                               &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td0       &kp A  &kp S  &kp D     &kp F  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1  &lt 3 SPACE                                               &lt 3 ENTER  &mo 2  &kp RALT
+&kp TAB    &kp Q  &kp W  &kp E      &kp R  &kp T                               &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&td0       &kp A  &kp S  &kp D      &kp F  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z  &kp X  &kp C      &kp V  &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                         &kp SPACE  &mo 4  &lt 6 SPACE                                               &lt 6 ENTER  &mo 5  &kp RALT
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -134,33 +161,6 @@
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
-        };
-
-        MO4 {
-            bindings = <
-&kp TAB    &kp D  &lt 6 LC(T)      &kp V        &kp G         &mt LCTRL LC(Q)                        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &kp K  &kp Z            &kp E        &kp P         &kp B                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &kp X  &mt LC(LSHFT) C  &mt LC(H) H  &kp LEFT_ALT  &mt LEFT_SHIFT ENTER  &to 0            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                   &kp SPACE    &lt 6 LC(Z)   &mo 5                                                  &trans  &trans  &trans
-            >;
-        };
-
-        MO5 {
-            bindings = <
-&trans     &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kt LG(S)  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans  &trans  &trans                                    &trans  &trans  &trans
-            >;
-        };
-
-        MO6 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                                    &trans  &trans  &trans
-            >;
         };
     };
 };
