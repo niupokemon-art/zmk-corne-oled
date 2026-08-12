@@ -50,6 +50,10 @@ manifest:
     - name: zmk-feature-module-physical-layout
       remote: cormoran
       revision: main 
+      # 关键补丁：加上这个缺失的依赖项
+    - name: zmk-feature-custom-settings
+      remote: cormoran
+      revision: main
 
   self:
     path: config
