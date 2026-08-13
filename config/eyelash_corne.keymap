@@ -52,10 +52,10 @@
             ccw-binding = <&kp C_VOL_DN>;
         };
 
-        new_behavior: new_behavior {
+        myholdtime: myholdtime {
             compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
-            bindings = <&none>, <&none>;
+            label = "MYHOLDTIME";
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -88,40 +88,46 @@
     keymap {
         compatible = "zmk,keymap";
 
-        MO4 {
+        MO0 {
             bindings = <
-&kp TAB    &kp D  &lt 2 LC(T)      &kp V        &kp G         &mt LCTRL LC(Q)                        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &kp K  &kp Z            &kp E        &kp P         &kp B                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &kp X  &mt LC(LSHFT) C  &mt LC(H) H  &kp LEFT_ALT  &mt LEFT_SHIFT ENTER  &to 3            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                   &kp SPACE    &lt 2 LC(Z)   &mo 1                                                  &trans  &trans  &trans
+&kp TAB    &kp D  &lt 2 LC(T)              &kp V        &kp G         &mt LCTRL LC(Q)                        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp K  &kp Z                    &kp E        &kp P         &kp B                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp X  &myholdtime LC(LSHFT) C  &mt LC(H) H  &kp LEFT_ALT  &mt LEFT_SHIFT ENTER  &to 3            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                           &kp SPACE    &lt 2 LC(Z)   &mo 1                                                  &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp LEFT_BRACKET RIGHT_BRACKET>;
         };
 
-        MO5 {
+        MO1 {
             bindings = <
-&trans     &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kt LG(S)  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans  &trans  &trans                                    &trans  &trans  &trans
+&none      &none          &kp LC(X)  &kp LC(E)      &kp LC(G)      &kp LA(DEL)                   &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&none      &kp LA(LC(A))  &kp LC(V)  &kp LA(LC(E))  &kp LC(D)      &kp DEL               &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LC(S)  &none          &kp LC(C)  &kp LC(LS(E))  &kp LC(LS(I))  &mkp RCLK    &none            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                     &none          &none          &none                                         &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&scroll_encoder>;
         };
 
-        MO6 {
+        MO2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                                    &trans  &trans  &trans
+&bt BT_SEL 1  &none     &kp UP    &none      &none  &none                             &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_SEL 2  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none                     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&out OUT_TOG  &kp I     &kp A     &none      &none  &none  &rgb_ug RGB_TOG            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                  &none      &none  &none                                             &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp LC(SEMI) LC(SINGLE_QUOTE)>;
         };
 
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E      &kp R  &kp T                               &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td0       &kp A  &kp S  &kp D      &kp F  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C      &kp V  &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp SPACE  &mo 4  &lt 6 SPACE                                               &lt 6 ENTER  &mo 5  &kp RALT
+&kp TAB    &kp Q  &kp W  &kp E      &kp R           &kp T                     &kp UP                &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BSPC
+&td0       &kp A  &kp S  &kp D      &kp F           &kp G           &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z  &kp X  &kp C      &mt LEFT_ALT V  &kp B  &to 0              &kp DOWN              &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
+                         &kp SPACE  &mo 4           &mo 5                                           &mo 6  &kp SPACE  &kp RALT
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -130,10 +136,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                         &trans        &trans        &trans                                                                          &kp INS          &kp DEL          &trans
+&bt BT_SEL 1  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                     &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
+&bt BT_SEL 2  &none   &none   &none   &none   &none                      &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
+&out OUT_TOG  &none   &none   &none   &none   &none   &rgb_ug RGB_TOG                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
+                              &none   &none   &none                                                                       &kp INS          &kp DEL          &trans
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
