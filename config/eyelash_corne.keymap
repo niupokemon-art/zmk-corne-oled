@@ -151,7 +151,7 @@
         layer_5 {
             bindings = <
 &none      &none          &kp LC(X)  &kp LC(E)      &kp LC(G)      &kp LA(DEL)                   &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&none      &kp LA(LC(A))  &kp LC(V)  &kp LA(LC(E))  &kp LC(D)      &kp DEL               &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&none      &kp LA(LC(A))  &kp LC(V)  &kp LC(LS(E))  &kp LC(D)      &kp DEL               &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp LC(S)  &none          &kp LC(C)  &kp LC(LS(E))  &kp LC(LS(I))  &mkp RCLK    &none            &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                      &none          &none          &none                                         &trans  &trans  &trans
             >;
