@@ -1,14 +1,4 @@
-manifest:
-  remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    - name: mctechnology17
-      url-base: https://github.com/mctechnology17
-    - name: eyelash
-      url-base: https://github.com/a741725193
-    - name: cormoran
-      url-base: https://github.com/cormoran
-  projects:
+ projects:
     - name: zmk
       remote: cormoran
       revision: v0.3-branch+dya
@@ -34,5 +24,18 @@ manifest:
     - name: zmk-module-runtime-input-processor
       remote: cormoran
       revision: zmk-v0.3.0.0
-  self:
-    path: config
+    # ↓ 新增:宏和组合键
+    - name: zmk-feature-runtime-macro
+      remote: cormoran
+      revision: main
+    - name: zmk-feature-runtime-combo
+      remote: cormoran
+      revision: main
+    # ↓ 可选:实时按键流预览
+    - name: zmk-feature-input-stream
+      remote: cormoran
+      revision: main
+    # ↓ 可选:在预览里显示轨迹球/编码器等扩展模块
+    - name: zmk-feature-module-physical-layout
+      remote: cormoran
+      revision: main
