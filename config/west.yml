@@ -1,4 +1,14 @@
- projects:
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: mctechnology17
+      url-base: https://github.com/mctechnology17
+    - name: eyelash
+      url-base: https://github.com/a741725193
+    - name: cormoran
+      url-base: https://github.com/cormoran
+  projects:
     - name: zmk
       remote: cormoran
       revision: v0.3-branch+dya
@@ -39,3 +49,5 @@
     - name: zmk-feature-module-physical-layout
       remote: cormoran
       revision: main
+  self:
+    path: config
