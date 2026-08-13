@@ -194,8 +194,8 @@ layers:
   - NUMBER
   - SYMBOL
   - Fn
-  - $$mdi:keyboard-space$$
-  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-command$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   NUMBER:
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {t: '1', s: '!'}
