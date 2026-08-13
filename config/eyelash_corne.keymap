@@ -136,7 +136,7 @@
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
-        MO0 {
+        layer_4 {
             bindings = <
 &kp TAB    &kp D  &lt 6 LC(T)              &kp V        &kp G         &mt LCTRL LC(Q)                        &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &kp LSHFT  &kp K  &kp Z                    &kp E        &kp P         &kp B                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -145,10 +145,10 @@
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT_BRACKET RIGHT_BRACKET>;
-            label = "mo0";
+            label = "CSP";
         };
 
-        MO1 {
+        layer_5 {
             bindings = <
 &none      &none          &kp LC(X)  &kp LC(E)      &kp LC(G)      &kp LA(DEL)                   &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &none      &kp LA(LC(A))  &kp LC(V)  &kp LA(LC(E))  &kp LC(D)      &kp DEL               &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -157,19 +157,19 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
-            label = "MO1";
+            label = "MO5";
         };
 
-        MO2 {
+        layer_6 {
             bindings = <
-&bt BT_SEL 1  &none     &kp UP    &none      &none  &none                             &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_SEL 2  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none                     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&out OUT_TOG  &kp I     &kp A     &none      &none  &none  &rgb_ug RGB_TOG            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                  &none      &none  &none                                             &trans  &trans  &trans
+&bt BT_SEL 1  &none     &kp UP    &none          &none  &none                                     &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_SEL 2  &kp LEFT  &kp DOWN  &kp RIGHT      &none  &none                             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&out OUT_TOG  &kp I     &kp A     &none          &none  &kp LS(LG(N))  &rgb_ug RGB_TOG            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                  &kp LS(LC(Z))  &none  &none                                                     &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(SEMI) LC(SINGLE_QUOTE)>;
-            label = "MO2";
+            label = "MO6";
         };
     };
 };
