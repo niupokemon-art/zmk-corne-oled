@@ -34,19 +34,14 @@ manifest:
     - name: zmk-module-runtime-input-processor
       remote: cormoran
       revision: zmk-v0.3.0.0
-    # ↓ 新增:宏和组合键
+    # ↓ 新增:runtime-macro / runtime-combo 的底层依赖,必须加
+    - name: zmk-feature-custom-settings
+      remote: cormoran
+      revision: main
     - name: zmk-feature-runtime-macro
       remote: cormoran
       revision: main
     - name: zmk-feature-runtime-combo
-      remote: cormoran
-      revision: main
-    # ↓ 可选:实时按键流预览
-    - name: zmk-feature-input-stream
-      remote: cormoran
-      revision: main
-    # ↓ 可选:在预览里显示轨迹球/编码器等扩展模块
-    - name: zmk-feature-module-physical-layout
       remote: cormoran
       revision: main
   self:
