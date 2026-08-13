@@ -88,46 +88,13 @@
     keymap {
         compatible = "zmk,keymap";
 
-        MO0 {
-            bindings = <
-&kp TAB    &kp D  &lt 2 LC(T)              &kp V        &kp G         &mt LCTRL LC(Q)                        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &kp K  &kp Z                    &kp E        &kp P         &kp B                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &kp X  &myholdtime LC(LSHFT) C  &mt LC(H) H  &kp LEFT_ALT  &mt LEFT_SHIFT ENTER  &to 3            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                           &kp SPACE    &lt 2 LC(Z)   &mo 1                                                  &trans  &trans  &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp LEFT_BRACKET RIGHT_BRACKET>;
-        };
-
-        MO1 {
-            bindings = <
-&none      &none          &kp LC(X)  &kp LC(E)      &kp LC(G)      &kp LA(DEL)                   &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&none      &kp LA(LC(A))  &kp LC(V)  &kp LA(LC(E))  &kp LC(D)      &kp DEL               &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LC(S)  &none          &kp LC(C)  &kp LC(LS(E))  &kp LC(LS(I))  &mkp RCLK    &none            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                     &none          &none          &none                                         &trans  &trans  &trans
-            >;
-
-            sensor-bindings = <&scroll_encoder>;
-        };
-
-        MO2 {
-            bindings = <
-&bt BT_SEL 1  &none     &kp UP    &none      &none  &none                             &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_SEL 2  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none                     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&out OUT_TOG  &kp I     &kp A     &none      &none  &none  &rgb_ug RGB_TOG            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                  &none      &none  &none                                             &trans  &trans  &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp LC(SEMI) LC(SINGLE_QUOTE)>;
-        };
-
         default_layer {
             display-name = "QWERTY";
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp E      &kp R           &kp T                     &kp UP                &kp Y  &kp U         &kp I      &kp O    &kp P     &kp BSPC
 &td0       &kp A  &kp S  &kp D      &kp F           &kp G           &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &kp J         &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C      &mt LEFT_ALT V  &kp B  &to 0              &kp DOWN              &kp N  &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
-                         &kp SPACE  &mo 4           &mo 5                                           &mo 6  &kp LEFT_GUI  &kp ENTER
+&kp LCTRL  &kp Z  &kp X  &kp C      &mt LEFT_ALT V  &kp B  &to 5              &kp DOWN              &kp N  &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
+                         &kp SPACE  &mo 4           &mo 2                                           &mo 3  &kp LEFT_GUI  &kp ENTER
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -167,6 +134,42 @@
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
+        };
+
+        MO0 {
+            bindings = <
+&kp TAB    &kp D  &lt 6 LC(T)              &kp V        &kp G         &mt LCTRL LC(Q)                        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp K  &kp Z                    &kp E        &kp P         &kp B                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp X  &myholdtime LC(LSHFT) C  &mt LC(H) H  &kp LEFT_ALT  &mt LEFT_SHIFT ENTER  &to 0            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                           &kp SPACE    &lt 6 LC(Z)   &mo 5                                                  &trans  &trans  &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp LEFT_BRACKET RIGHT_BRACKET>;
+            label = "mo0";
+        };
+
+        MO1 {
+            bindings = <
+&none      &none          &kp LC(X)  &kp LC(E)      &kp LC(G)      &kp LA(DEL)                   &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&none      &kp LA(LC(A))  &kp LC(V)  &kp LA(LC(E))  &kp LC(D)      &kp DEL               &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LC(S)  &none          &kp LC(C)  &kp LC(LS(E))  &kp LC(LS(I))  &mkp RCLK    &none            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                     &none          &none          &none                                         &trans  &trans  &trans
+            >;
+
+            sensor-bindings = <&scroll_encoder>;
+            label = "MO1";
+        };
+
+        MO2 {
+            bindings = <
+&bt BT_SEL 1  &none     &kp UP    &none      &none  &none                             &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_SEL 2  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none                     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&out OUT_TOG  &kp I     &kp A     &none      &none  &none  &rgb_ug RGB_TOG            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                  &none      &none  &none                                             &trans  &trans  &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp LC(SEMI) LC(SINGLE_QUOTE)>;
+            label = "MO2";
         };
     };
 };
