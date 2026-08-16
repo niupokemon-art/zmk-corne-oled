@@ -40,9 +40,6 @@ manifest:
     - name: zmk-module-runtime-input-processor
       remote: cormoran
       revision: zmk-v0.3.0.0
-    - name: zmk-raw-hid # <-- Raw HID module
-      remote: zzeneg
-      revision: main
     - name: zmk-raw-hid
       remote: niupokemon-art        # <-- 从 zzeneg 改成 yourname
       revision: main           # <-- 或者你新建的修复分支名
