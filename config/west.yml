@@ -10,6 +10,8 @@ manifest:
       url-base: https://github.com/cormoran
     - name: zzeneg # <-- required for Raw HID module
       url-base: https://github.com/zzeneg
+    - name: niupokemon-art          # <-- 新增：你自己 fork 的 remote
+      url-base: https://github.com/niupokemon-art
     - name: srwi # <-- required for KeyPeek module
       url-base: https://github.com/srwi
   projects:
@@ -41,6 +43,9 @@ manifest:
     - name: zmk-raw-hid # <-- Raw HID module
       remote: zzeneg
       revision: main
+    - name: zmk-raw-hid
+      remote: yourname        # <-- 从 zzeneg 改成 yourname
+      revision: main           # <-- 或者你新建的修复分支名
     - name: zmk-keypeek-layer-notifier # <-- KeyPeek module
       remote: srwi
       revision: master
