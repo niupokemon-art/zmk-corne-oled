@@ -8,8 +8,6 @@ manifest:
       url-base: https://github.com/a741725193
     - name: cormoran
       url-base: https://github.com/cormoran
-    - name: zzeneg # <-- required for Raw HID module
-      url-base: https://github.com/zzeneg
     - name: niupokemon-art          # <-- 新增：你自己 fork 的 remote
       url-base: https://github.com/niupokemon-art
     - name: srwi # <-- required for KeyPeek module
