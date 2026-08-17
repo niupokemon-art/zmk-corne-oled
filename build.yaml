@@ -1,14 +1,14 @@
 include:
-  # 1. 右手配置：移除 nice_oled，使用 ZMK 原生 UI（以支持 Layer 同步显示）
+  # 1. 右手配置：重新启用 nice_oled
   - board: eyelash_nano
-    shield: eyelash_corne_right
+    shield: eyelash_corne_right nice_oled
 
-  # 2. 左手配置：保持不变（继续保留 nice_oled 与 ZMK Studio 参数）
+  # 2. 左手配置：保持不变
   - board: eyelash_nano
     shield: eyelash_corne_left nice_oled raw_hid_adapter
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
 
-  # 3. 重置固件配置
+  # 3. 重置固件
   - board: eyelash_nano
     shield: settings_reset
