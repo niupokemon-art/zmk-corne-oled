@@ -28,11 +28,3 @@
 &default_transform {
     col-offset = <7>;
 };
-
-/* 适配 eyelash_nano / corne 的通用 display 翻转设置 */
-&i2c0 {
-    oled: ssd1306@3c {
-        segment-remap;
-        com-invdir;
-    };
-};
