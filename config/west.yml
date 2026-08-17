@@ -8,7 +8,7 @@ manifest:
       url-base: https://github.com/a741725193
     - name: cormoran
       url-base: https://github.com/cormoran
-    - name: niupokemon-art          # <-- 新增：1你自己 fork 的 remote
+    - name: niupokemon-art          # <-- 新增：你自己 fork 的 remote
       url-base: https://github.com/niupokemon-art
     - name: srwi # <-- required for KeyPeek module
       url-base: https://github.com/srwi
