@@ -1,9 +1,14 @@
 include:
+  # 1. 右手配置：只保留 nice_oled（不要加 raw_hid_adapter）
   - board: eyelash_nano
-    shield: eyelash_corne_right nice_oled raw_hid_adapter
+    shield: eyelash_corne_right nice_oled
+
+  # 2. 左手配置：保持原样（保留 raw_hid_adapter 与 ZMK Studio 参数）
   - board: eyelash_nano
     shield: eyelash_corne_left nice_oled raw_hid_adapter
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
+
+  # 3. 重置固件配置
   - board: eyelash_nano
     shield: settings_reset
