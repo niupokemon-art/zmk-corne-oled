@@ -29,7 +29,7 @@
     col-offset = <7>;
 };
 
-/* OLED 屏幕旋转 180 度 */
+/* SSD1306 OLED 屏幕旋转 180 度 */
 &oled {
     segment-remap;
     com-invdir;
