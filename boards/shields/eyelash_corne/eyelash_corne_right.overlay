@@ -29,8 +29,10 @@
     col-offset = <7>;
 };
 
-/* SSD1306 OLED 屏幕旋转 180 度 */
-&oled {
-    segment-remap;
-    com-invdir;
+/* 适配 eyelash_nano / corne 的通用 display 翻转设置 */
+&i2c0 {
+    oled: ssd1306@3c {
+        segment-remap;
+        com-invdir;
+    };
 };
