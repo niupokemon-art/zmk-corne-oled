@@ -164,7 +164,7 @@
             bindings = <
 &bt BT_SEL 1  &none     &kp UP    &none          &none  &none                                     &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &bt BT_SEL 2  &kp LEFT  &kp DOWN  &kp RIGHT      &none  &none                             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&out OUT_TOG  &kp I     &kp A     &none          &none  &kp LS(LG(N))  &rgb_ug RGB_TOG            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&out OUT_TOG  &kp I     &kp A     &none          &none  &kp LS(LG(N))  &rgb_ug RGB_TOG            &trans          &to 0   &trans  &trans  &trans  &trans  &trans
                                   &kp LS(LC(Z))  &none  &none                                                     &trans  &trans  &trans
             >;
 
