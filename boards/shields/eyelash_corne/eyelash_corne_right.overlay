@@ -29,11 +29,8 @@
     col-offset = <7>;
 };
 
-/* 旋转屏幕 180 度（正向显示） */
-&nice_view_spi {
-    cs-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>;
-};
-
-&lcd {
-    rotate = <180>;
+/* OLED 屏幕旋转 180 度 */
+&oled {
+    segment-remap;
+    com-invdir;
 };
