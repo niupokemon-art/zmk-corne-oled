@@ -95,6 +95,20 @@
             #binding-cells = <0>;
             bindings = <&kp SLASH>, <&kp QUESTION>;
         };
+
+        td_mo2tocsp: td_mo2tocsp {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_MO2TOCSP";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&to 4>;
+        };
+
+        td_mo5to0: td_mo5to0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_MO5TO0";
+            #binding-cells = <0>;
+            bindings = <&mo 5>, <&to 0>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -126,10 +140,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E      &kp R           &kp T                     &kp UP                &kp Y  &kp U                       &kp I      &kp O       &kp P          &kp BSPC
-&td0       &kp A  &kp S  &kp D      &kp F           &kp G           &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &kp J                       &kp K      &kp L       &td_semicolon  &td_quote
-&kp LCTRL  &kp Z  &kp X  &kp C      &mt LEFT_ALT V  &kp B  &to 4              &kp DOWN              &kp N  &kp M                       &td_comma  &td_period  &td_slash      &kp DEL
-                         &kp SPACE  &mo 1           &mo 2                                           &mo 3  &myholdtime LEFT_GUI SPACE  &kp ENTER
+&kp TAB    &kp Q  &kp W  &kp E      &kp R           &kp T                            &kp UP                &kp Y  &kp U                       &kp I      &kp O       &kp P          &kp BSPC
+&td0       &kp A  &kp S  &kp D      &kp F           &kp G                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &kp J                       &kp K      &kp L       &td_semicolon  &td_quote
+&kp LCTRL  &kp Z  &kp X  &kp C      &mt LEFT_ALT V  &kp B         &to 4              &kp DOWN              &kp N  &kp M                       &td_comma  &td_period  &td_slash      &kp DEL
+                         &kp SPACE  &mo 1           &td_mo2tocsp                                           &mo 3  &myholdtime LEFT_GUI SPACE  &kp ENTER
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
