@@ -27,8 +27,8 @@ layers:
   - J
   - K
   - L
-  - {t: ;, s: ':'}
-  - {t: '''', s: '"'}
+  - '&td_semicolon'
+  - '&td_quote'
   - $$mdi:apple-keyboard-control$$
   - Z
   - X
@@ -39,9 +39,9 @@ layers:
   - $$mdi:arrow-down-bold$$
   - N
   - M
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
-  - {t: /, s: '?'}
+  - '&td_comma'
+  - '&td_period'
+  - '&td_slash'
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:keyboard-space$$
   - NUMBER
