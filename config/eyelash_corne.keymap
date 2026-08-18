@@ -60,6 +60,41 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
+
+        td_semicolon: td_semicolon {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_SEMICOLON";
+            #binding-cells = <0>;
+            bindings = <&kp SEMICOLON>, <&kp COLON>;
+        };
+
+        td_quote: td_quote {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_QUOTE";
+            #binding-cells = <0>;
+            bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
+        };
+
+        td_comma: td_comma {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_COMMA";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp LESS_THAN>;
+        };
+
+        td_period: td_period {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_PERIOD";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD>, <&kp GREATER_THAN>;
+        };
+
+        td_slash: td_slash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_SLASH";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&kp QUESTION>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -91,9 +126,9 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E      &kp R           &kp T                     &kp UP                &kp Y  &kp U                       &kp I      &kp O    &kp P     &kp BSPC
-&td0       &kp A  &kp S  &kp D      &kp F           &kp G           &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &kp J                       &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C      &mt LEFT_ALT V  &kp B  &to 4              &kp DOWN              &kp N  &kp M                       &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
+&kp TAB    &kp Q  &kp W  &kp E      &kp R           &kp T                     &kp UP                &kp Y  &kp U                       &kp I      &kp O       &kp P          &kp BSPC
+&td0       &kp A  &kp S  &kp D      &kp F           &kp G           &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &kp J                       &kp K      &kp L       &td_semicolon  &td_quote
+&kp LCTRL  &kp Z  &kp X  &kp C      &mt LEFT_ALT V  &kp B  &to 4              &kp DOWN              &kp N  &kp M                       &td_comma  &td_period  &td_slash      &kp DEL
                          &kp SPACE  &mo 1           &mo 2                                           &mo 3  &myholdtime LEFT_GUI SPACE  &kp ENTER
             >;
 
