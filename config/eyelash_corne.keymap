@@ -152,10 +152,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&bt BT_SEL 1  &kp N1           &kp N2           &kp N3  &kp N4  &kp N5                                        &mmv MOVE_UP                     &kp N6  &kp N7  &kp N8           &kp N9      &kp N0    &kp BSPC
-&bt BT_SEL 2  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &none   &none   &none                         &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none   &none   &none            &kp INS     &kp HOME  &kp PG_UP
-&out OUT_TOG  &rgb_ug RGB_SAD  &rgb_ug RGB_HUI  &none   &none   &none      &rgb_ug RGB_TOG                    &mmv MOVE_DOWN                   &none   &none   &none            &kp DELETE  &kp END   &kp PG_DN
-                                                &none   &none   &kp ENTER                                                                      &none   &none   &kp PRINTSCREEN
+&bt BT_SEL 1  &kp N1           &kp N2           &kp N3  &kp N4  &kp N5                                        &mmv MOVE_UP                     &kp N6   &kp N7  &kp N8           &kp N9      &kp N0    &kp BSPC
+&bt BT_SEL 2  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &none   &none   &none                         &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none    &none   &none            &kp INS     &kp HOME  &kp PG_UP
+&out OUT_TOG  &rgb_ug RGB_SAD  &rgb_ug RGB_HUI  &none   &none   &none      &rgb_ug RGB_TOG                    &mmv MOVE_DOWN                   &none    &none   &none            &kp DELETE  &kp END   &kp PG_DN
+                                                &none   &none   &kp ENTER                                                                      &kp ESC  &none   &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
