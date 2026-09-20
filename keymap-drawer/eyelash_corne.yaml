@@ -33,7 +33,7 @@ layers:
   - Z
   - X
   - C
-  - {t: V, h: '$$mdi:apple-keyboard-option$$'}
+  - V
   - B
   - {t: CSP, h: toggle}
   - $$mdi:arrow-down-bold$$
