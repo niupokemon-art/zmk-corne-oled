@@ -35,7 +35,7 @@
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+            bindings = <&kp TAB>, <&kp CAPS>;
         };
 
         rsr_trans: rsr_trans {
@@ -109,6 +109,14 @@
             #binding-cells = <0>;
             bindings = <&mo 5>, <&to 0>;
         };
+
+        td_mo1_mo2: td_mo1_mo2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_MO1_MO2";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&mo 1>, <&mo 2>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -132,6 +140,11 @@
             bindings = <&soft_off>;
             key-positions = <1 15 29>;
         };
+
+        tog_swiCSP {
+            bindings = <&tog 4>;
+            key-positions = <42 44>;
+        };
     };
 
     keymap {
@@ -140,10 +153,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E      &kp R           &kp T                            &kp UP                &kp Y  &kp U                       &kp I      &kp O       &kp P          &kp BSPC
-&td0       &kp A  &kp S  &kp D      &kp F           &kp G                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &kp J                       &kp K      &kp L       &td_semicolon  &td_quote
-&kp LCTRL  &kp Z  &kp X  &kp C      &mt LEFT_ALT V  &kp B         &to 4              &kp DOWN              &kp N  &kp M                       &td_comma  &td_period  &td_slash      &kp DEL
-                         &kp SPACE  &mo 1           &td_mo2tocsp                                           &mo 3  &myholdtime LEFT_GUI SPACE  &kp ENTER
+&td0            &kp Q  &kp W  &kp E         &kp R           &kp T                            &kp UP                &kp Y  &kp U                       &kp I      &kp O       &kp P          &kp BSPC
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F           &kp G                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &kp J                       &kp K      &kp L       &kp SEMICOLON  &kp APOSTROPHE
+&kp LCTRL       &kp Z  &kp X  &kp C         &mt LEFT_ALT V  &kp B         &to 4              &kp DOWN              &kp N  &kp M                       &kp COMMA  &kp PERIOD  &kp SLASH      &kp DEL
+                              &kp LEFT_ALT  &kp SPACE       &td_mo2tocsp                                           &mo 3  &myholdtime LEFT_GUI SPACE  &kp ENTER
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -211,7 +224,7 @@
 
         layer_6 {
             bindings = <
-&bt BT_SEL 1  &none     &kp UP    &none          &none  &none                                     &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_SEL 1  &none     &kp UP    &none          &none  &kp BACKSPACE                             &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &bt BT_SEL 2  &kp LEFT  &kp DOWN  &kp RIGHT      &none  &none                             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &out OUT_TOG  &none     &none     &none          &none  &kp LS(LG(N))  &rgb_ug RGB_TOG            &trans          &to 0   &trans  &trans  &trans  &trans  &trans
                                   &kp LS(LC(Z))  &none  &none                                                     &trans  &trans  &trans
