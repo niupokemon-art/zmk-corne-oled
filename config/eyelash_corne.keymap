@@ -37,7 +37,7 @@
             #binding-cells = <0>;
             bindings = <&kp TAB>, <&kp CAPS>;
 
-            tapping-term-ms = <301>;
+            tapping-term-ms = <240>;
         };
 
         rsr_trans: rsr_trans {
