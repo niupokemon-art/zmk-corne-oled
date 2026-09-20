@@ -45,7 +45,7 @@ layers:
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:keyboard-space$$
-  - '&td_mo2tocsp'
+  - '&td_mo1_mo2'
   - Fn
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
