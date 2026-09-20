@@ -150,19 +150,19 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        MO0 {
             display-name = "QWERTY";
             bindings = <
-&td0            &kp Q  &kp W  &kp E         &kp R           &kp T                           &kp UP                &kp Y  &kp U                       &kp I      &kp O       &kp P          &kp BSPC
-&kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F           &kp G                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &kp J                       &kp K      &kp L       &kp SEMICOLON  &kp APOSTROPHE
-&kp LCTRL       &kp Z  &kp X  &kp C         &mt LEFT_ALT V  &kp B        &to 4              &kp DOWN              &kp N  &kp M                       &kp COMMA  &kp PERIOD  &kp SLASH      &kp DEL
-                              &kp LEFT_ALT  &kp SPACE       &td_mo1_mo2                                           &mo 3  &myholdtime LEFT_GUI SPACE  &kp ENTER
+&td0            &kp Q  &kp W  &kp E         &kp R      &kp T                           &kp UP                &kp Y  &kp U                       &kp I      &kp O       &kp P          &kp BSPC
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F      &kp G                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &kp J                       &kp K      &kp L       &kp SEMICOLON  &kp APOSTROPHE
+&kp LCTRL       &kp Z  &kp X  &kp C         &kp V      &kp B        &to 4              &kp DOWN              &kp N  &kp M                       &kp COMMA  &kp PERIOD  &kp SLASH      &kp DEL
+                              &kp LEFT_ALT  &kp SPACE  &td_mo1_mo2                                           &mo 3  &myholdtime LEFT_GUI SPACE  &kp ENTER
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
-        lower_layer {
+        MO1 {
             display-name = "NUMBER";
             bindings = <
 &bt BT_SEL 1  &kp N1           &kp N2           &kp N3  &kp N4  &kp N5                                        &mmv MOVE_UP                     &kp N6   &kp N7  &kp N8           &kp N9      &kp N0    &kp BSPC
@@ -174,7 +174,7 @@
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
-        raise_layer {
+        MO2 {
             display-name = "SYMBOL";
             bindings = <
 &trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
@@ -186,7 +186,7 @@
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
-        layer_3 {
+        MO3 {
             display-name = "Fn";
             bindings = <
 &studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                                  &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
@@ -198,7 +198,7 @@
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
-        layer_4 {
+        MO4 {
             bindings = <
 &kp TAB    &kp D  &lt 6 LC(T)              &kp V        &kp G         &mt LCTRL LC(Q)                        &trans          &trans  &trans     &trans     &trans  &trans  &kp BACKSPACE
 &kp LSHFT  &kp Z  &kp K                    &kp E        &kp P         &kp B                          &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
@@ -222,7 +222,7 @@
             label = "MO5";
         };
 
-        layer_6 {
+        MO6 {
             bindings = <
 &bt BT_SEL 1  &none     &kp UP    &none          &none  &kp BACKSPACE                             &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &bt BT_SEL 2  &kp LEFT  &kp DOWN  &kp RIGHT      &none  &none                             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
