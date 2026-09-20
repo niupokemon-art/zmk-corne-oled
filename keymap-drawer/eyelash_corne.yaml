@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
-  - $$mdi:keyboard-tab$$
+  - '&td0'
   - Q
   - W
   - E
@@ -14,7 +14,7 @@ layers:
   - O
   - P
   - {t: '$$mdi:backspace$$', type: backspace}
-  - '&td0'
+  - $$mdi:apple-keyboard-shift$$
   - A
   - S
   - D
@@ -27,8 +27,8 @@ layers:
   - J
   - K
   - L
-  - '&td_semicolon'
-  - '&td_quote'
+  - {t: ;, s: ':'}
+  - <
   - $$mdi:apple-keyboard-control$$
   - Z
   - X
@@ -39,12 +39,12 @@ layers:
   - $$mdi:arrow-down-bold$$
   - N
   - M
-  - '&td_comma'
-  - '&td_period'
-  - '&td_slash'
+  - {t: ',', s: <}
+  - .
+  - {t: /, s: '?'}
   - $$mdi:backspace-reverse-outline$$
+  - $$mdi:apple-keyboard-option$$
   - $$mdi:keyboard-space$$
-  - NUMBER
   - '&td_mo2tocsp'
   - Fn
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
@@ -93,7 +93,7 @@ layers:
   - END
   - PG DN
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-esc$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -300,7 +300,7 @@ layers:
   - {t: '$$mdi:arrow-up-bold$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -346,3 +346,5 @@ layers:
 combos:
 - p: [1, 15, 29]
   k: '&soft_off'
+- p: [42, 44]
+  k: {t: CSP, h: toggle}
