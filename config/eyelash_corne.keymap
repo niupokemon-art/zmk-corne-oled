@@ -36,6 +36,8 @@
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
             bindings = <&kp TAB>, <&kp CAPS>;
+
+            tapping-term-ms = <301>;
         };
 
         rsr_trans: rsr_trans {
