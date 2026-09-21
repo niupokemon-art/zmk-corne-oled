@@ -562,6 +562,12 @@ rect.held, rect.combo.held {
 <text x="317" y="217" class="combo tap layer-activator">CSP</text>
 </a><text x="317" y="228" class="combo hold">toggle</text>
 </g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="649" y="204" width="28" height="26" class="combo"/>
+<a href="#CSP">
+<text x="663" y="217" class="combo tap layer-activator">CSP</text>
+</a><text x="663" y="228" class="combo hold">toggle</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 318)" class="layer-NUMBER">
@@ -850,6 +856,12 @@ rect.held, rect.combo.held {
 <text x="317" y="217" class="combo tap layer-activator">CSP</text>
 </a><text x="317" y="228" class="combo hold">toggle</text>
 </g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="649" y="204" width="28" height="26" class="combo"/>
+<a href="#CSP">
+<text x="663" y="217" class="combo tap layer-activator">CSP</text>
+</a><text x="663" y="228" class="combo hold">toggle</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 637)" class="layer-SYMBOL">
@@ -1124,6 +1136,12 @@ rect.held, rect.combo.held {
 <text x="317" y="217" class="combo tap layer-activator">CSP</text>
 </a><text x="317" y="228" class="combo hold">toggle</text>
 </g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="649" y="204" width="28" height="26" class="combo"/>
+<a href="#CSP">
+<text x="663" y="217" class="combo tap layer-activator">CSP</text>
+</a><text x="663" y="228" class="combo hold">toggle</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 955)" class="layer-Fn">
@@ -1390,6 +1408,12 @@ rect.held, rect.combo.held {
 <a href="#CSP">
 <text x="317" y="217" class="combo tap layer-activator">CSP</text>
 </a><text x="317" y="228" class="combo hold">toggle</text>
+</g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="649" y="204" width="28" height="26" class="combo"/>
+<a href="#CSP">
+<text x="663" y="217" class="combo tap layer-activator">CSP</text>
+</a><text x="663" y="228" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
@@ -1659,6 +1683,12 @@ rect.held, rect.combo.held {
 <text x="317" y="217" class="combo tap layer-activator">CSP</text>
 </a><text x="317" y="228" class="combo hold">toggle</text>
 </g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="649" y="204" width="28" height="26" class="combo"/>
+<a href="#CSP">
+<text x="663" y="217" class="combo tap layer-activator">CSP</text>
+</a><text x="663" y="228" class="combo hold">toggle</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 1592)" class="layer-MO5">
@@ -1922,6 +1952,12 @@ rect.held, rect.combo.held {
 <a href="#CSP">
 <text x="317" y="217" class="combo tap layer-activator">CSP</text>
 </a><text x="317" y="228" class="combo hold">toggle</text>
+</g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="649" y="204" width="28" height="26" class="combo"/>
+<a href="#CSP">
+<text x="663" y="217" class="combo tap layer-activator">CSP</text>
+</a><text x="663" y="228" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
@@ -2189,6 +2225,12 @@ rect.held, rect.combo.held {
 <a href="#CSP">
 <text x="317" y="217" class="combo tap layer-activator">CSP</text>
 </a><text x="317" y="228" class="combo hold">toggle</text>
+</g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="649" y="204" width="28" height="26" class="combo"/>
+<a href="#CSP">
+<text x="663" y="217" class="combo tap layer-activator">CSP</text>
+</a><text x="663" y="228" class="combo hold">toggle</text>
 </g>
 </g>
 </g>

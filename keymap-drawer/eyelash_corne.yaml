@@ -348,3 +348,5 @@ combos:
   k: '&soft_off'
 - p: [43, 44]
   k: {t: CSP, h: toggle}
+- p: [45, 46]
+  k: {t: CSP, h: toggle}
