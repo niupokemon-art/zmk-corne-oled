@@ -147,6 +147,11 @@
             bindings = <&tog 4>;
             key-positions = <43 44>;
         };
+
+        tog_swiCSP2 {
+            bindings = <&tog 4>;
+            key-positions = <45 46>;
+        };
     };
 
     keymap {
