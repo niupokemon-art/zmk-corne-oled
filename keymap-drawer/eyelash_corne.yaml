@@ -43,9 +43,9 @@ layers:
   - .
   - {t: /, s: '?'}
   - $$mdi:backspace-reverse-outline$$
-  - $$mdi:apple-keyboard-option$$
   - $$mdi:keyboard-space$$
   - '&td_mo1_mo2'
+  - $$mdi:apple-keyboard-option$$
   - Fn
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -346,5 +346,5 @@ layers:
 combos:
 - p: [1, 15, 29]
   k: '&soft_off'
-- p: [42, 44]
+- p: [43, 44]
   k: {t: CSP, h: toggle}
