@@ -162,7 +162,7 @@
             bindings = <
 &td0            &kp Q  &kp W  &kp E      &kp R        &kp T                            &kp UP                &kp Y  &kp U                       &kp I      &kp O       &kp P          &kp BSPC
 &kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F        &kp G                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H  &kp J                       &kp K      &kp L       &kp SEMICOLON  &kp APOSTROPHE
-&kp LCTRL       &kp Z  &kp X  &kp C      &kp V        &kp B         &to 4              &kp DOWN              &kp N  &kp M                       &kp COMMA  &kp PERIOD  &kp SLASH      &kp DEL
+&kp LCTRL       &kp Z  &kp X  &kp C      &kp V        &kp B         &to 4              &kp DOWN              &kp N  &kp M                       &kp COMMA  &kp PERIOD  &kp SLASH      &myholdtime RIGHT_SHIFT DELETE
                               &kp SPACE  &td_mo1_mo2  &kp LEFT_ALT                                           &mo 3  &myholdtime LEFT_GUI SPACE  &kp ENTER
             >;
 
