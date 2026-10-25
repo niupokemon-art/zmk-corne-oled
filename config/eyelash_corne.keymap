@@ -172,10 +172,10 @@
         MO1 {
             display-name = "NUMBER";
             bindings = <
-&bt BT_SEL 1  &kp N1           &kp N2           &kp N3  &kp N4  &kp N5                                        &mmv MOVE_UP                     &kp N6   &kp N7  &kp N8           &kp N9      &kp N0    &kp BSPC
-&bt BT_SEL 2  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &none   &none   &none                         &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none    &none   &none            &kp INS     &kp HOME  &kp PG_UP
-&out OUT_TOG  &rgb_ug RGB_SAD  &rgb_ug RGB_HUI  &none   &none   &none      &rgb_ug RGB_TOG                    &mmv MOVE_DOWN                   &none    &none   &none            &kp DELETE  &kp END   &kp PG_DN
-                                                &none   &none   &kp ENTER                                                                      &kp ESC  &none   &kp PRINTSCREEN
+&bt BT_SEL 1  &kp N1           &kp N2           &kp N3  &kp N4  &kp N5                                        &mmv MOVE_UP                     &kp N6          &kp N7     &kp N8            &kp N9             &kp N0         &kp BSPC
+&bt BT_SEL 2  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &none   &none   &none                         &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS       &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp GRAVE
+&out OUT_TOG  &rgb_ug RGB_SAD  &rgb_ug RGB_HUI  &none   &none   &none      &rgb_ug RGB_TOG                    &mmv MOVE_DOWN                   &kp UNDERSCORE  &kp PLUS   &kp LEFT_BRACE    &kp RBRC           &kp PIPE       &kp TILDE
+                                                &none   &none   &kp ENTER                                                                      &kp ESC         &none      &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -184,10 +184,10 @@
         MO2 {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                           &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &none                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                    &trans     &trans     &kp SPACE                                                            &kp RET    &trans     &trans
+&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                           &mmv MOVE_UP                     &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none      &none     &none      &kp INS   &kp HOME  &kp PG_UP
+&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &none                    &mmv MOVE_DOWN                   &none      &none     &none      &none     &kp END   &kp PG_DN
+                                    &trans     &trans     &kp SPACE                                                            &kp RET    &trans    &trans
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -196,10 +196,10 @@
         MO3 {
             display-name = "Fn";
             bindings = <
-&studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                                  &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
-&trans          &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
-&trans          &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &to 4        &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
-                                       &trans       &trans     &trans                                                                   &trans       &trans     &trans
+&studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                                  &mmv MOVE_UP                     &kp F6              &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
+&trans          &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader         &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
+&trans          &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp LC(LA(DELETE))  &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
+                                       &trans       &trans     &trans                                                                   &trans              &trans     &trans
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
