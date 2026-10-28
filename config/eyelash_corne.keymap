@@ -207,10 +207,10 @@
 
         MO4 {
             bindings = <
-&kp TAB    &kp D  &lt 6 LC(T)              &kp V        &kp G         &mt LCTRL LC(Q)                        &trans          &trans  &trans     &trans     &trans  &trans  &kp BACKSPACE
-&kp LSHFT  &kp Z  &kp K                    &kp E        &kp P         &kp B                          &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
-&kp LCTRL  &kp X  &myholdtime LC(LSHFT) C  &mt LC(H) H  &kp LEFT_ALT  &mt LEFT_SHIFT ENTER  &to 0            &trans          &trans  &trans     &trans     &trans  &trans  &kp DELETE
-                                           &kp SPACE    &lt 6 LC(Z)   &mo 5                                                  &mo 6   &kp SPACE  &kp ENTER
+&kp LC(LEFT_ALT)  &kp D  &lt 6 LC(T)              &kp V        &kp G         &mt LCTRL LC(Q)                        &trans          &trans  &trans     &trans     &trans  &trans  &kp BACKSPACE
+&kp LSHFT         &kp Z  &kp K                    &kp E        &kp P         &kp B                          &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
+&kp LCTRL         &kp X  &myholdtime LC(LSHFT) C  &mt LC(H) H  &kp LEFT_ALT  &mt LEFT_SHIFT ENTER  &to 0            &trans          &trans  &trans     &trans     &trans  &trans  &kp DELETE
+                                                  &kp SPACE    &lt 6 LC(Z)   &mo 5                                                  &mo 6   &kp SPACE  &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT_BRACKET RIGHT_BRACKET>;
