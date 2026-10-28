@@ -197,7 +197,7 @@ layers:
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   CSP:
-  - $$mdi:keyboard-tab$$
+  - Ctl+$$mdi:apple-keyboard-option$$
   - D
   - {t: Ctl+T, h: MO6}
   - V
@@ -238,7 +238,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
   - {t: Ctl+Z, h: MO6}
   - MO5
